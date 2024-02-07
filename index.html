@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Game</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="scoreboard">
+        <div class="title">
+          <img src="ROCK.png " /><br />
+          <img src="PAPER.png" /><br />
+          <img src="SCISSORS.png" />
+        </div>
+        <div class="score">
+          <div>
+            <p>COMPUTER SCORE</p>
+            <h1 id="comp-Score">0</h1>
+          </div>
+        </div>
+        <div class="score">
+          <div>
+            <p>YOUR SCORE</p>
+            <h1 id="my-Score">0</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="hands">
+        <div class="rock">
+          <img src="Group 4.png" alt=" rock" onclick="pickUserHand('rock')" />
+        </div>
+        <div class="scissors">
+          <img
+            src="Group 1.png"
+            alt="scissor"
+            onclick="pickUserHand('scissors')"
+          />
+        </div>
+        <div class="paper">
+          <img src="Group 2.png" alt="paper" onclick="pickUserHand('paper')" />
+        </div>
+      </div>
+
+      <div class="contest">
+        <div class="userhand">
+          <h1>YOU PICKED</h1>
+          <div class="handImageContainer">
+            <img id="userPickImage" src="Group 4.png" alt="" />
+          </div>
+        </div>
+
+        <div class="referee">
+          <div class="decision"><h1>YOU WIN</h1></div>
+          <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+        </div>
+
+        <div class="computerHand">
+          <h1>PC PICKED</h1>
+          <div class="handImageContainer">
+            <img id="computerPickImage" src="Group 2.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <div class="rule_box">
+        <div class="heading">
+          <p>Game Rules</p>
+        </div>
+        <div class="close_btn">
+          <img src="close.png" alt="" />
+        </div>
+        <div class="content">
+          <li class="items">
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <li class="items">
+            Agree ahead of time whether you’ll count off “rock, paper, scissors,
+            shoot” or just “rock, paper, scissors.”
+          </li>
+          <li class="items">
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time
+          </li>
+          <li class="items">
+            If both players lay down the same hand, each player lays down
+            another hand
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule_button">
+      <button class="btn">RULES</button>
+      <a href="winpage.html" class="rul_btn" id="next_btn" style="display: flex">NEXT</a>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
